@@ -1,15 +1,39 @@
 #include <iostream>
+#include <string>    // for string
 using namespace std;
-int main(){
-    /*✔️ Rules for variables
 
-    1.Must start with letter or underscore
-    2.Cannot start with a number
-    3.No spaces
-    4.Case-sensitive
-    5.Cannot use C++ keywords (int, float, return, etc.)*/
+int main() {
 
-      // ---------- CONSTANTS ----------
+    /*
+        ===== RULES FOR VARIABLES IN C++ =====
+
+        1. A variable name must start with:
+           - A letter (a–z or A–Z)
+           - or an underscore (_)
+
+        2. A variable cannot start with a number.
+           Example: 1age ❌ , age1 ✔
+
+        3. No spaces allowed in variable names.
+           Example: my age ❌ , my_age ✔
+
+        4. Variable names are case-sensitive.
+           age, Age, AGE are all different.
+
+        5. Cannot use C++ keywords as variable names.
+           int, float, return, while, for, etc. ❌
+
+        6. Variable names should be meaningful.
+           x1 ❌ , totalMarks ✔
+
+        7. Special symbols are not allowed except underscore.
+           %, #, @, &, * ❌
+
+        8. A variable must be declared before using it.
+    */
+
+
+    // ---------- CONSTANTS ----------
     const float PI = 3.14159;
     const int MAX_AGE = 100;
     const char SECTION = 'A';
