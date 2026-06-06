@@ -9,7 +9,7 @@ int main() {
     for(int i=0;i<n;i++){
         cin>> a[i];
     }
-    sort(a,a+5);
+    sort(a,a+n);  // sort(start,end);
     for(int i=0;i<n;i++){
         cout<< a[i]<<" ";
     }
