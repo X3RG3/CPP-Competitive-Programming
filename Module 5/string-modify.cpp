@@ -4,8 +4,8 @@ using namespace std;
 int main() {
     string s = "Hello world";
     string s2 = "Hi";
-    s+=s2;
-    //s.append(s2);
+    //s+=s2;
+    s.append(s2);
     cout<<s<<endl;
     //s.push_back('B');
     s+= 'b';
