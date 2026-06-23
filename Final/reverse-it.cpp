@@ -1,0 +1,32 @@
+#include <bits/stdc++.h>
+using namespace std;
+class Student{
+    public:
+    string  nm;
+    int cls;
+    char s;
+    int id;
+
+};
+int main() {
+    int n;
+    cin>>n;
+    Student st[n];
+    char sec[n];
+    for(int i=0;i<n;i++){
+        cin>>st[i].nm>>st[i].cls>>st[i].s>>st[i].id;
+    }
+
+    int l = 0, r = n-1;
+
+    while(l < r){
+    swap(st[l].s, st[r].s);
+    l++;
+    r--;
+    }
+    for(int i=0;i<n;i++){
+        cout<<st[i].nm<<" "<<st[i].cls<<" "<<st[i].s<<" "<<st[i].id<<endl;
+    }
+
+    return 0;
+}
