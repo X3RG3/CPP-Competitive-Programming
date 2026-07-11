@@ -5,13 +5,15 @@ class Node{
     public:
     int value;
     Node* next;
+
+    Node(int val){
+        this->value = value;
+        this->next = NULL;
+    }
 };
 int main() {
     
-    Node a,b,c;
-    a.value = 10;
-    b.value = 20;
-    c.value = 30;
+    Node a(10),b(20),c(30);
 
     a.next = &b;
     b.next = &c;
