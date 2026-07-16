@@ -11,7 +11,7 @@ class Node{
     }
 };
 
-void insert_at_tail(Node* &head,Node* &tail,int val){
+void insert_at_tail(Node* &head,Node* &tail, int val){
     Node* newnode = new Node(val);
     if(head == NULL){
         head = newnode;
@@ -21,17 +21,7 @@ void insert_at_tail(Node* &head,Node* &tail,int val){
 
     tail->next = newnode;
     tail = tail->next;
-}
 
-void insert_at_head(Node* &head,Node* &tail, int val){
-    Node* newnode = new Node(val);
-    if(head == NULL){
-        head = newnode;
-        tail = newnode;
-        return;
-    }
-    newnode->next = head;
-    head = newnode;
 }
 
 void delete_at_any_position(Node* &head,Node* &tail,int idx){
@@ -66,37 +56,48 @@ void delete_at_any_position(Node* &head,Node* &tail,int idx){
     temp->next = deleteNode->next;
     delete deleteNode;
 }
-void print(Node* head){
+
+void print_linked_list(Node* head){
     Node* temp = head;
-    while (temp != NULL)
-    {
-        cout<<temp->value<<" ";
+    while(temp != NULL){
+        cout<< temp->value<<" ";
         temp = temp->next;
     }
+}
+
+void check_duplicate(Node* &head,Node* &tail){
+    if(head == NULL || head->next == NULL){
+        return;
+    }
+    int idx = 1;
+    Node* cur = head;
     
+    while(cur!= NULL ){
+        Node* ck = cur->next;
+        while(ck != NULL){
+            if(cur->value == ck->value){
+                delete_at_any_position(head,tail,idx);
+                idx++;
+            }
+            ck = ck->next;
+        }
+        cur = cur->next;
+    }
 }
 int main() {
-    int t;
-    cin>>t;
     Node* head = NULL;
     Node* tail = NULL;
-    while(t--){
-        
-        int x,v;
-        cin>>x>>v;
-        if(x == 0){
-            insert_at_head(head,tail,v);
+    while(true){
+        int v;
+        cin>>v;
+        if(v==-1){
+            break;
         }
-        else if(x == 1){
+        else{
             insert_at_tail(head,tail,v);
         }
-        else if(x == 2){
-            delete_at_any_position(head,tail,v);
-        }
-
-        print(head);
-        cout<<endl;
     }
-
+    check_duplicate(head,tail);
+    print_linked_list(head);
     return 0;
 }
