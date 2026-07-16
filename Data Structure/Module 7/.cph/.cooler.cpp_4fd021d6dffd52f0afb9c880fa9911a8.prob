@@ -1,0 +1,1 @@
+{"name":"Local: cooler","url":"c:\\CodeFolders\\C++ Competetive Programming\\Data Structure\\Module 7\\cooler.cpp","tests":[{"id":1784134875314,"input":"3\n10 9\n40 38\n40 0","output":"10\n79\n820"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\CodeFolders\\C++ Competetive Programming\\Data Structure\\Module 7\\cooler.cpp","group":"local","local":true}
