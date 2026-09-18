@@ -41,6 +41,8 @@ void doubly_linked_list_reverse(Node* &head, Node* &tail){
     }
 }
 
+
+
 int main() {
     Node* head = NULL;
     Node* tail = NULL;
@@ -62,7 +64,7 @@ int main() {
 
     print_forward(head);
 
-
+ 
 
     return 0;
 }

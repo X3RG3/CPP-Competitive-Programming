@@ -36,17 +36,17 @@ void insert_at_tail(Node* &head,Node* &tail, int val){
 }
 
 int main() {
-    Node* head = new Node(10);
-    Node* a = new Node(20);
-    Node* tail = new Node(30);
+    Node* head = NULL;
+    Node* tail = NULL;
+    int val;
 
-    head->next = a;
-    a->prev = head;
-    a->next = tail;
-
-    tail->prev = a;
-
-    insert_at_tail(head,tail,100);
+    while(true){
+        cin>>val;
+        if(val == -1){
+            break;
+        }
+        insert_at_tail(head,tail,val);
+    }
 
     print_forward(head);
 
