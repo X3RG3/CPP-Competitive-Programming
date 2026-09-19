@@ -36,8 +36,19 @@ void insert_at_tail(Node* &head,Node* &tail, int val){
 }
 
 void check_pal(Node* &head, Node* &tail){
+    bool flag = true;
     for(Node* i=head,*j = tail; i!=j && i->prev !=j ;i=i->next,j=j->prev){
-        swap(i->value,j->value);
+            if(i->value != j->value){
+                flag = false;
+                break;
+            }
+    }
+
+    if(flag){
+        cout<<"YES"<<endl;
+    }
+    else{
+        cout<<"NO"<<endl;
     }
 }
 
@@ -56,12 +67,6 @@ int main() {
         insert_at_tail(head,tail,val);
     }
 
-
-
     check_pal(head,tail);
-    print_forward(head);
-
- 
-
     return 0;
 }
